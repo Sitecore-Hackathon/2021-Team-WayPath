@@ -1,0 +1,23 @@
+﻿---
+ID: "d9e9c046-3198-4089-b77a-d24fcdbe1abc"
+Parent: "5bc45da8-3337-49ef-be7c-cda1b14b0236"
+Template: "4d96d06c-54ee-47f3-97e5-1b4fa4b902b0"
+Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard/PageSettings/DialogWindow Parameters
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210306T212937Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3ffcee2a-de6e-4a0b-9142-aef599b8d9b7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T212937Z

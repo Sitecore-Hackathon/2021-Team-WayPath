@@ -21,7 +21,7 @@
     @foreach (var item in Model.ScriptItems)
     {
         <div>
-            <a href="@item.Url">@item.Title</a>
+            <a class="scriptlink" data-id="@item.Guid" href="@item.Url">@item.Title</a>
         </div>
     }
 </div>
