@@ -1,0 +1,148 @@
+﻿---
+ID: "7a82db7f-857a-4a01-b993-24f9bd8e20b9"
+Parent: "347c7233-b32c-4cdc-9d91-9d91704c0bda"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts/Presentation/Renderings/Replace Templates and Renderings
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    $fieldRequiredValidator = { 
+        if([string]::IsNullOrEmpty($variable.Value)){
+            $variable.Error = "Please provide a value."
+        }
+    }
+    $defaultLayout = Get-LayoutDevice "Default";
+    $useFinalLayout = $False;
+    $dialogProps = @{
+        Parameters = @(
+            @{ Name = "rootItem"; value=""; Title="Root Item"; Source="Datasource=/sitecore/content/"; editor="droptree"},
+            @{ Name = "currentTemplate"; Value=""; Title="Item Type to Replace"; Tooltip="The templates to replace"; editor="droptree"; Source="/sitecore/templates"; Validator=$fieldRequiredValidator}
+            @{ Name = "targetTemplate"; Value=""; Title="Item Type to Replace With"; Tooltip="The templates to search through"; editor="droptree"; Source="/sitecore/templates"; Validator=$fieldRequiredValidator}
+            @{ Name = "replaceRenderings"; Title="Replace Renderings?"; editor="check"; GroupId="ReplaceOption"},
+            @{ Name = "currentRendering"; Value=""; Title="Item Type to Replace"; Tooltip="The templates to search through"; editor="droptree"; Source="/sitecore/layout/Renderings"; ParentGroupId="ReplaceOption"; HideOnValue="0"}
+            @{ Name = "targetRendering"; Value=""; Title="Item Type to Replace With"; Tooltip="The templates to search through"; editor="droptree"; Source="/sitecore/layout/Renderings"; ParentGroupId="ReplaceOption"; HideOnValue="0"}
+            @{ Name = "useFinalLayout"; value="1"; Title="Use Final Layout"; editor="check"},
+            @{ Name = "backupPackage"; Title="Create a Backup Package"; editor="check"}
+        )
+        Description = "Find and replace based on the specified text."
+        Title = "Find and Replace"
+        Width = 700
+        Height = 575
+        OkButtonName = "Proceed"
+        CancelButtonName = "Abort"
+        ShowHint = $true
+        Icon = [regex]::Replace($PSScript.Appearance.Icon, "Office", "OfficeWhite", [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    }
+    $result = Read-Variable @dialogProps
+        
+    if($result -ne "ok") {
+        Exit
+    }
+    $itemsWithCurrentTemplate = Get-ChildItem -Item $rootItem -recurse | Where-Object { $_.TemplateName -eq $currentTemplate.Name };
+    $itemsChanged = [System.Collections.ArrayList]@();
+    if($replaceRenderings -eq 1)
+    {
+        
+        $targetRendering = $targetRendering | New-Rendering;
+        
+        $itemsWithCurrentRendering = [System.Collections.ArrayList]@();
+        foreach ( $item in Get-ChildItem -Item $rootItem -Recurse)
+        {
+            if(Get-Layout $item)
+            {
+                $renderings = Get-Rendering -Item $item -Device $defaultLayout -FinalLayout:$useFinalLayout;
+                Write-Host "Finding Renderings on $($item.FullPath)"
+                foreach ( $curRendering in $renderings )
+                {
+                    if( $curRendering.ItemID -eq $currentRendering.ID)
+                    {
+                        $itemsWithCurrentRenderings.Add($item);
+                        break;
+                    }
+                }
+            }
+        }
+        $itemsChanged += $itemsWithCurrentRendering;
+    }
+    $itemsChanged += $itemsWithCurrentTemplate;
+    if($backupPackage -eq 1)
+    {
+        $package = New-Package "Swap Templates";
+         
+        $package.Metadata.Author = (Get-User -Current).Name;
+        $package.Metadata.Version = ;
+         
+         
+        $itemsChanged | ForEach-Object {
+            $source = $_ | New-ItemSource -Name $_.Name -InstallMode Merge -MergeMode Merge
+            $package.Sources.Add($source);
+        }
+         
+        # Save package
+        Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Version).zip" -Zip  
+         
+        # Offer the user to download the package
+        Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Version).zip"
+        Write-Host $data.count
+    }
+    $itemsWithCurrentTemplate | ForEach-Object {
+        Set-ItemTemplate -Item $_ -TemplateItem $targetTemplate };
+        $name = $_.Name;
+        Write-Host "Item Changed: $name";
+        
+    if($replaceRenderings)
+    {
+        $itemsWithCurrentRendering | ForEach-Object {
+            $item = $_;
+            $renderings = Get-Rendering -Item $item -Device $defaultLayout -FinalLayout:$useFinalLayout;
+            Write-Host "Modifying Renderings on $($item.FullPath)"
+            foreach ( $curRendering in $renderings )
+            {
+                if( $curRendering.ItemID -eq $currentRendering.ID)
+                {
+                    Write-Host "Setting rendering $($rendering.Name) on $($item.FullPath)";
+                    $datasource = $curRendering.Datasource;
+                    $placeholder = $curRendering.Placeholder;
+                    Remove-Rendering -Item $item -Instance $curRendering -FinalLayout:$useFinalLayout;
+                    Add-Rendering -Item $item -Rendering $targetRendering -Datasource $datasource -Placeholder $placeholder -FinalLayout:$useFinalLayout;
+                }
+            }
+        }
+    }
+    $reportProps = @{
+        Property = @(
+            "ID","Name","ItemPath","TemplateName","Version"
+        )
+        Title = "Find and Replace Report"
+        InfoTitle = "Report Details"
+        InfoDescription = "The following report shows items found with the specified criteria."
+    }
+    $itemsChanged | Show-ListView @reportProps
+    Close-Window
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210306T202828Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c706a286-73a4-43b5-a215-bfef9e69bde2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T202836Z
