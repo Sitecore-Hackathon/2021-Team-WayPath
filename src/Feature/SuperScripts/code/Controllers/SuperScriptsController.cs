@@ -77,7 +77,7 @@ namespace TeamWayPath.Feature.SuperScripts.Controllers
 
             // no script request, send to main
             if (String.IsNullOrEmpty(scriptID))
-                return View("MainMenu");
+                return View("Main");
 
 
             var masterDb = Sitecore.Configuration.Factory.GetDatabase("master");
