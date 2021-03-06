@@ -9,5 +9,6 @@ namespace TeamWayPath.Feature.SuperScripts.Models
     {
         public string Title { get; set; }
         public string Script { get; set; }
+        public string Link { get; set; }
     }
 }
