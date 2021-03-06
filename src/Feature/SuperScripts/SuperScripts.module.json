@@ -10,11 +10,18 @@
                 "scope": "itemAndDescendants"
             },
 			{
+                "name": "templates-core",
+                "path": "/sitecore/templates/Feature/SuperScripts",
+                "allowedPushOperations": "createUpdateAndDelete",
+                "scope": "itemAndDescendants",
+				"database": "core"
+            },
+			{
                 "name": "launchpadbutton",
                 "path": "/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Modules",
                 "allowedPushOperations": "createUpdateAndDelete",
                 "scope": "itemAndDescendants",
-				"database": "core",
+				"database": "core"
             },
 			{
                 "name": "speakapplication",
