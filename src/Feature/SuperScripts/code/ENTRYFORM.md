@@ -37,7 +37,8 @@ Simply install the SuperScripts.zip package!
 Superscripts come with several out of box scripts, but more can be added.
 
 To add more scripts, under the master database navigate to: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts
-From here you will select an existing category or add a new category.  Then add your scripts under it using available insert options.  Follow the structure currently in place.
+From here you will select an existing or add your own Integration Point Library.  Then add your scripts under it using available insert options.  Followed by a Powershell Script Library.
+And finally the Powershell script itself under that.  Review the current structure for better understanding.
 
 ## Usage instructions
 ⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.

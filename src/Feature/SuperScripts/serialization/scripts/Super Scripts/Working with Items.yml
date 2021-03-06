@@ -2,7 +2,7 @@
 ID: "289c224a-e7c8-48a0-96b8-b124dae7b329"
 Parent: "7d40d970-475b-4227-b7f8-9041dda63b87"
 Template: "6d82fcd8-c379-443c-97a9-c6423c71e7d5"
-Path: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts/Working with Items
+Path: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts/Working With Items
 SharedFields:
 - ID: "6d22bcce-2799-4324-b0d9-c44df5effaf3"
   Hint: Description
