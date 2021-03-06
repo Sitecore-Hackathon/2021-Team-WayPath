@@ -21,12 +21,7 @@
     @foreach (var item in Model.ScriptItems)
     {
         <div>
-            <a onclick="javascript:return scForm.postEvent(this,event,'item:executescript(script=@item.Guid,scriptDb=master)')">@item.Title</a>
-
-            <a href="@item.Url">test - @item.Title</a>
-        </div>
-        <div>
-            <a href="@item.Link">@item.Title</a> 
+            <a href="@item.Url">@item.Title</a>
         </div>
     }
 </div>
