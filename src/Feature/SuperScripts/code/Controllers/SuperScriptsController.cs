@@ -5,7 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Sitecore.Data.Items;
+using Sitecore;
 using TeamWayPath.Feature.SuperScripts.Models;
+using Sitecore.Text;
 
 namespace TeamWayPath.Feature.SuperScripts.Controllers
 {
@@ -91,10 +93,16 @@ namespace TeamWayPath.Feature.SuperScripts.Controllers
             var scriptItems = new List<ScriptItem>();
             foreach (Item child in scriptFolderItem.Children)
             {
+
+                var urlString = new UrlString(UIUtil.GetUri("control:PowerShellRunner"));
+                urlString.Append("scriptId", child.ID.ToString());
+                urlString.Append("scriptDb", "master");
+
                 scriptItems.Add(new ScriptItem()
                 {
                     Title = child.DisplayName,
-                    Script = child["Script"]
+                    Guid = child.ID.ToString(),
+                    Url = urlString.ToString()
                 });
             }
 
