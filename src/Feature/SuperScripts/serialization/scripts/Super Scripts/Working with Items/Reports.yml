@@ -2,7 +2,7 @@
 ID: "49ceb515-9141-4f4d-8cf2-ef9769705abe"
 Parent: "289c224a-e7c8-48a0-96b8-b124dae7b329"
 Template: "ab154d3d-1126-4ab4-ac21-8b86e6bd70ea"
-Path: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts/Working with Items/Reports
+Path: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts/Working With Items/Reports
 Languages:
 - Language: en
   Versions:
