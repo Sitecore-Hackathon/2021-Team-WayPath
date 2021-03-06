@@ -25,19 +25,19 @@ SharedFields:
         l="{4F72A793-BDBC-4262-9523-6AADD8FEA487}">
         <r
           id="{DAFAFFB8-74AF-4141-A96A-70B16834CEC6}"
-          par="PageCodeScriptFileName=%2f-%2fspeak%2fv1%2flistmanager%2fDashboard.js"
+          par="PageCodeScriptFileName=%2fsitecore%2fshell%2fclient%2fapplications%2fsuperscripts%2fsuperscripts.js"
           ph="Page.Code"
           uid="{237256AA-9D30-463E-9ED1-90CFF092FCF6}" />
         <r
-          id="{A7B206E7-7393-4125-962C-02EEFA4734CF}"
-          par="Id=DialogWindow1"
-          ph="ApplicationHeader"
-          uid="{79C67174-52A0-426E-A248-C52C36805A3C}" />
+          id="{B60FB581-44D1-4372-86A2-D6E494F020E1}"
+          par="Backdrop=Static&amp;Id=DialogWindow1"
+          ph="ApplicationContent.Main"
+          uid="{8432898A-2B4B-4E37-8A55-F46148F7AA92}" />
         <r
-          id="{90F4E9F6-B3C3-4A76-A7E8-FCCF6E68EC2D}"
-          par="Id=Frame1"
-          ph="ApplicationHeader"
-          uid="{0FDA1377-F175-497F-BAD3-E373D678212E}" />
+          id="{41EF8D3D-6B51-4E31-B61E-417A5E652AE1}"
+          par="Height=100%25&amp;Width=100%25&amp;Id=Frame1"
+          ph="DialogWindow1.Content"
+          uid="{14A24091-3F1F-409E-BACC-E8FEC8240512}" />
         <r
           ds="{5C173DB2-A00B-4CA9-9985-7005130763F3}"
           id="{7E1570EB-E8DC-484C-9EC0-050F5E3EC3CF}"
@@ -120,11 +120,11 @@ Languages:
       Value: Main
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1b317e6d-1fa5-434c-840c-d8a445db2971"
+      Value: "9bae65b3-7f66-47bf-9866-3366ddd92b27"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210306T215502Z
+      Value: 20210306T222937Z
