@@ -2,6 +2,7 @@
 @using System.Web.Mvc;
 
 @model TeamWayPath.Feature.SuperScripts.Models.DisplayScriptViewModel
+<link rel="stylesheet" href="/sitecore/shell/client/Applications/LaunchPad/LaunchPad.css" type="text/css" />
 
 <script type="text/javascript" src="/sitecore/shell/controls/lib/jsnlog/jsnlog.min.js"></script>
 <script src="/sitecore/shell/controls/lib/prototype/prototype.js" type="text/javascript"></script>
@@ -21,7 +22,14 @@
     @foreach (var item in Model.ScriptItems)
     {
         <div>
-            <a class="scriptlink" data-id="@item.Guid" href="@item.Url">@item.Title</a>
+            <a class="scriptlink sc-launchpad-item" data-id="@item.Guid" href="@item.Url">
+                <span class="icon">
+                    <img src="/temp/iconcache/launchpadicons/48x48/emailmanager.png" width="48" height="48" alt="Email Experience Manager">
+                </span>
+                <span class="sc-launchpad-text">
+                    @item.Title
+                </span>
+            </a>
         </div>
     }
 </div>
