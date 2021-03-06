@@ -83,6 +83,7 @@
     <Content Include="App_Config\Include\Feature\Feature.SuperScripts.config" />
     <None Include="Properties\PublishProfiles\Default.pubxml" />
     <None Include="README.md" />
+    <Content Include="sitecore\shell\client\Applications\SuperScripts\superscripts.js" />
     <Content Include="Views\SuperScripts\Main.cshtml" />
     <Content Include="Views\SuperScripts\Error.cshtml" />
     <Content Include="Views\SuperScripts\TreeMenu.cshtml" />
