@@ -1,8 +1,8 @@
 ﻿---
-ID: "20be3276-aeba-47d3-a879-e972446bc04a"
-Parent: "24893125-c10a-423a-8c86-029f275f4c86"
+ID: "e36d6710-1ec8-4446-acf4-099469ba3e7e"
+Parent: "d3a7655d-5471-4541-b359-756c72c64d5e"
 Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
-Path: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts/Presentation/Renderings/Update Rendering Parameter
+Path: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts/Working With Items/Field Values/Update Field Value 2
 SharedFields:
 - ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
   Hint: Script
@@ -16,12 +16,11 @@ SharedFields:
             Parameters = @(
                 @{ Name = "searchRoot"; Title="Search Root"; Tooltip="The starting point when performing a search."; Source="Datasource=/sitecore/content/"; editor="droptree";},
                 @{ Name = "templateItems"; Value=""; Title="Templates"; Tooltip="The templates to search through"; editor="treelist"; Source="/sitecore/templates" },
-                @{ Name = "renderingItem"; Value=""; Title="Rendering"; Tooltip="The rendering to update"; editor="droptree"; Source="/sitecore/layout/Renderings" },
-                @{ Name = "fieldName"; Value=""; Title="The rendering parameter field name"; Tooltip="The rendering parameter field"; Placeholder="Rendering parameter"; Columns=6; Validator=$fieldRequiredValidator;},
-                @{ Name = "fieldValue"; Value=""; Title="The rendering parameter Field Value"; Tooltip="The new The rendering parameter field value."; Placeholder="New Value"; Columns=6; Validator=$fieldRequiredValidator;}
+                @{ Name = "fieldName"; Value=""; Title="Field Name"; Tooltip="The field name containing the text."; Placeholder="Title"; Columns=6; Validator=$fieldRequiredValidator;},
+                @{ Name = "fieldValue"; Value=""; Title="Field Value"; Tooltip="The new field value."; Placeholder="New Value"; Columns=6; Validator=$fieldRequiredValidator;}
             )
-            Description = "Find all pages with a specific rendering and update a rendering parameter value"
-            Title = "Update Rendering Parameter Value"
+            Description = "Update a specific field with defined value"
+            Title = "Update Field Value"
             Width = 700
             Height = 575
             OkButtonName = "Proceed"
@@ -36,20 +35,21 @@ SharedFields:
             Exit
         }
         
-        Write-Host $renderingItem.Name
         $foundItems = @($searchRoot) + @($searchRoot.Axes.GetDescendants() | Initialize-Item)
         [System.Collections.ArrayList]$reportItems = @()
         foreach($currentItem in $foundItems) {
-                 $renderingInstance = Get-Rendering -Item $currentItem -Rendering $renderingItem
-                  if ($renderingInstance) { 
-                     foreach ($r in $renderingInstance)
-                     {
-                         $parameters = [ordered]@{"@fieldName"="@fieldValue"}
-                         Set-RenderingParameter -Instance $r -Parameter $parameters
-                         Set-Rendering -Item $currentItem -Instance $r
-                     }
-                     $reportItems.Add($currentItem)
-                  }
+            $fieldsToUpdate = @{}
+             Get-ItemField -Item $currentItem -ReturnType Field -Name $fieldName `
+                    | ForEach-Object{ 
+                        $originalValue = $_.Value
+                        if ($originalValue -ne $fieldValue)   
+                        {
+                            $currentItem.Editing.BeginEdit()
+                            $currentItem.Fields[$fieldName].Value = $fieldValue
+                            $currentItem.Editing.EndEdit()
+                            $reportItems.Add($currentItem)
+                        }   
+                    }
         }
         
         $reportProps = @{
@@ -69,7 +69,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210306T232059Z
+      Value: 20210306T231945Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -80,11 +80,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d7c542d4-32e1-4cb3-86b3-7688a1ccb7a1"
+      Value: "eeaf28ec-1792-4ef3-982d-fc51e7cd3eea"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210306T232103Z
+      Value: 20210306T232257Z
