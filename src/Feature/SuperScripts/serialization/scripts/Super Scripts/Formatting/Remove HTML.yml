@@ -1,0 +1,109 @@
+﻿---
+ID: "c5929e2a-80c8-4389-9fc4-b522bc0f8a1f"
+Parent: "1ff8944e-1b32-4215-9342-829b4feb5316"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts/Formatting/Remove HTML
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    $dialogProps = @{
+        Parameters = @(
+            @{ Name = "searchRoot"; Title="Search Root"; Tooltip="The starting point when performing a search."; Source="Datasource=/sitecore/content/"; editor="droptree";},
+            @{ Name = "templateItems"; Value=""; Title="Templates"; Tooltip="The templates to search through"; editor="treelist"; Source="/sitecore/templates" },
+            @{ Name = "fieldForSearch"; Value="Field Name"; Title="Field Name (optional)"; Tooltip="Search a specific field";}
+        )
+        Description = "Removes any HTML tags from field values"
+        Title = "Remove HTML Tags"
+        Width = 700
+        Height = 575
+        OkButtonName = "Proceed"
+        CancelButtonName = "Abort"
+        ShowHint = $true
+        Icon = [regex]::Replace($PSScript.Appearance.Icon, "Office", "OfficeWhite", [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    }
+    
+    $result = Read-Variable @dialogProps
+        
+    if($result -ne "ok") {
+        Exit
+    }
+    
+    $index="sitecore_master_index";
+    #$searchProps = @{
+    ##    Index = $targetIndex
+     #   Criteria = @(
+     ##       @{Filter = "DescendantOf"; Field = ("master:/" + $searchRoot.Paths.Path) },
+      #      @{Filter = "ContainsAny"; Field = "_template"; Value = $templateIds}
+      #  )
+    #}
+    $foundItems = @($searchRoot) + @($searchRoot.Axes.GetDescendants() | Initialize-Item)
+    [System.Collections.ArrayList]$reportItems = @()
+    foreach($currentItem in $foundItems) {
+        $shouldUpdate = $false
+        $fieldsToUpdate = @{}
+         Get-ItemField -Item $currentItem -ReturnType Field -Name "*" `
+                | ForEach-Object{ 
+                    $originalValue = $_.Value
+                    $fieldValue = $originalValue -replace '<[^>]+>',''
+                    if ($originalValue -ne $fieldValue)   
+                    {
+                        if (!$shouldUpdate)
+                        {
+                            $shouldUpdate = $true
+                        }
+                        $fieldsToUpdate.Add($_.Name, $fieldValue)
+                    }   
+                }
+        if ($shouldUpdate)
+        { 
+            $currentItem.Editing.BeginEdit()
+            foreach ($key in $fieldsToUpdate.Keys) { 
+                $currentItem.Fields[$key].Value = $fieldsToUpdate[$key]
+                $reportItems.Add($currentItem)
+            } 
+            $currentItem.Editing.EndEdit()
+            
+        }
+        
+    }
+    
+    $reportProps = @{
+        Property = @(
+            "ID","Name","ItemPath","Language","Version"
+        )
+        Title = "Find and Replace Report"
+        InfoTitle = "Report Details"
+        InfoDescription = "The following report shows items found with the specified criteria."
+    }
+    $reportItems | Show-ListView @reportProps
+    Close-Window
+     
+    
+    
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210306T192406Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4277208e-e73b-4db4-98ac-93f20cfca4d3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T192406Z

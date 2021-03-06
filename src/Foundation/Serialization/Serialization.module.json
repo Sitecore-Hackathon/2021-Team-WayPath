@@ -1,0 +1,35 @@
+{
+    "namespace": "TeamWayPath.Foundation.Serialization",
+    "references": "",
+    "items": {
+        "includes": [
+            {
+                "name": "templates",
+                "path": "/sitecore/templates/Feature",
+                "allowedPushOperations": "createUpdateAndDelete",
+                "scope": "singleItem"
+            },
+			{
+                "name": "templates-core",
+                "path": "/sitecore/templates/Feature",
+                "allowedPushOperations": "createUpdateAndDelete",
+                "scope": "singleItem",
+				"database": "core"
+            },
+			{
+                "name": "speakapplication",
+                "path": "/sitecore/client/Your Apps/Feature",
+                "allowedPushOperations": "createUpdateAndDelete",
+                "scope": "singleItem",
+				"database": "core"
+            },
+			{
+                "name": "layouts-core",
+                "path": "/sitecore/layout/Renderings/Feature",
+                "allowedPushOperations": "createUpdateAndDelete",
+                "scope": "singleItem",
+				"database": "core"
+            }			
+        ]
+    }
+}
