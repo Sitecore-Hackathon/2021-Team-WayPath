@@ -1,0 +1,19 @@
+﻿@using System.Collections.Generic;
+@using System.Web.Mvc;
+
+@model TeamWayPath.Feature.SuperScripts.Models.DisplayScriptViewModel
+
+
+
+<div>
+    @foreach (var item in Model.ScriptItems)
+    {
+        <div>
+            @item.Title
+        </div>
+        <div>
+            @item.Script
+        </div>
+    }
+</div>
+

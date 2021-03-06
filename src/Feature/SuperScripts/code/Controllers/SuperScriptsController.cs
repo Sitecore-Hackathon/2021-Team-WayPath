@@ -12,6 +12,7 @@ namespace TeamWayPath.Feature.SuperScripts.Controllers
     public class SuperScriptsController : Controller
     {
         // GET: SuperScripts
+        // Builds left hand menu of scripts
         public ActionResult TreeMenu()
         {
             var coreDb = Sitecore.Configuration.Factory.GetDatabase("core");
@@ -53,7 +54,7 @@ namespace TeamWayPath.Feature.SuperScripts.Controllers
                     var menuItem = new MenuItem()
                     {
                         Title = child.DisplayName,
-                        Link = child.ID.ToString()
+                        Link = "?scriptID=" + child.ID.ToString()
                     };
                     menuItems.Add(menuItem);
                 }
@@ -65,6 +66,41 @@ namespace TeamWayPath.Feature.SuperScripts.Controllers
             return View(model);
 
 
+        }
+
+        // Builds display and action button for each script
+        public ActionResult DisplayScript()
+        {
+            string scriptID = Request.QueryString["scriptID"];
+
+            // no script request, send to main
+            if (String.IsNullOrEmpty(scriptID))
+                return View("MainMenu");
+
+
+            var masterDb = Sitecore.Configuration.Factory.GetDatabase("master");
+
+            var scriptFolderItem = masterDb.GetItem(scriptID);
+
+            // item not found, send error
+            if (scriptFolderItem == null)
+                return View("Error");
+
+            var model = new DisplayScriptViewModel();
+
+            var scriptItems = new List<ScriptItem>();
+            foreach (Item child in scriptFolderItem.Children)
+            {
+                scriptItems.Add(new ScriptItem()
+                {
+                    Title = child.DisplayName,
+                    Script = child["Script"]
+                });
+            }
+
+            model.ScriptItems = scriptItems;
+
+            return View("DisplayScript", model);
         }
     }
 }
