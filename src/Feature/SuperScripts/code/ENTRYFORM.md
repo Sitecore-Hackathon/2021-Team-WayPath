@@ -12,13 +12,10 @@ Superscripts is a collection of powershell scripts made accessible to authors fo
 Current scripts
 Swap Templates - Allows you to mass swap a template with another.
 
-Swap Templates With Renderings - Allows you to mass swap a template with another, and also changes renderings.
-
 Find and Replace in Field - Find and replace one string with another in a specific field.
 
 Find and Replace in ALL Fields - Find and replace on string with another in all fields.
 
-Move Renderings to Different Placeholder - Moving renderings to a different placeholder.
 
 ## Video link
 ⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
