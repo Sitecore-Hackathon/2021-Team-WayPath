@@ -11,7 +11,7 @@ SharedFields:
         Parameters = @(
             @{ Name = "searchRoot"; Title="Search Root"; Tooltip="The starting point when performing a search."; Source="Datasource=/sitecore/content/"; editor="droptree";},
             @{ Name = "templateItems"; Value=""; Title="Templates"; Tooltip="The templates to search through"; editor="treelist"; Source="/sitecore/templates" },
-            @{ Name = "fieldForSearch"; Value="Field Name"; Title="Field Name (optional)"; Tooltip="Search a specific field";}
+            @{ Name = "fieldForSearch"; Value=""; Title="Field Name (optional)"; Tooltip="Search a specific field";}
         )
         Description = "Removes any HTML tags from field values"
         Title = "Remove HTML Tags"
@@ -99,11 +99,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4277208e-e73b-4db4-98ac-93f20cfca4d3"
+      Value: "206b7426-03ac-4f59-ae1a-7b95ee05b0bb"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210306T192406Z
+      Value: 20210306T192834Z
