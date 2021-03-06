@@ -1,0 +1,41 @@
+{
+    "namespace": "TeamWayPath.Feature.SuperScripts",
+    "references": "",
+    "items": {
+        "includes": [
+            {
+                "name": "templates",
+                "path": "/sitecore/templates/Feature/SuperScripts",
+                "allowedPushOperations": "createUpdateAndDelete",
+                "scope": "itemAndDescendants"
+            },
+			{
+                "name": "launchpadbutton",
+                "path": "/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Modules",
+                "allowedPushOperations": "createUpdateAndDelete",
+                "scope": "itemAndDescendants",
+				"database": "core",
+            },
+			{
+                "name": "speakapplication",
+                "path": "/sitecore/client/Your Apps/Feature/SuperScripts",
+                "allowedPushOperations": "createUpdateAndDelete",
+                "scope": "itemAndDescendants",
+				"database": "core"
+            },
+			{
+                "name": "layouts-core",
+                "path": "/sitecore/layout/Renderings/Feature/SuperScripts",
+                "allowedPushOperations": "createUpdateAndDelete",
+                "scope": "itemAndDescendants",
+				"database": "core"
+            },
+			{
+                "name": "scripts",
+                "path": "/sitecore/system/Modules/PowerShell/Script Library/Super Scripts",
+                "allowedPushOperations": "createUpdateAndDelete",
+                "scope": "itemAndDescendants"				
+            }
+        ]
+    }
+}

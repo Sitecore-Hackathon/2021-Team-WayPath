@@ -1,0 +1,40 @@
+﻿---
+ID: "abbbfc92-6654-48a3-b1f7-0e3a60a2b476"
+Parent: "c2f164b7-cf5f-4acb-b71a-2f43294fc25d"
+Template: "5ee9a69b-bc29-452e-b2d0-ad421a04e7bf"
+Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard/PageSettings/My Lists/My Lists ActionControl Parameters/ListActionColumn/ListActionGroup/Export
+SharedFields:
+- ID: "377bca4b-8687-4a89-b0d7-cc56765ad81b"
+  Hint: Click
+  Value: |
+    trigger:export:csv({"control":"MyListsListControl","actionsDataSource":"ExportListActionDataSource"})
+- ID: "549da08f-8b0e-4a2f-9f1f-b35c474fe2a0"
+  Hint: ImageUrl
+  Value: ~/icon/Office/16x16/download.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 700
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140428T125234
+    - ID: "443c0046-ceb9-432a-9db0-cbc11787c786"
+      Hint: Title
+      Value: Export contacts
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "97e2f91c-294a-4717-aca1-c2beeed2e60f"
+    - ID: "9384139b-2f73-4f0f-8650-0c7a1d4c6ddc"
+      Hint: Tooltip
+      Value: Export contacts to a CSV file.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T041343Z

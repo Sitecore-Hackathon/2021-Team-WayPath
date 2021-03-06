@@ -1,0 +1,35 @@
+﻿---
+ID: "42b9e968-de98-4fd4-b257-1e9b46a73134"
+Parent: "8f51b77d-fd2c-461b-91a7-5c362c10a73c"
+Template: "87fe4e75-d567-4873-81b1-cf8560667ee0"
+Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard/Script Library/Script 1/PageSettings/TabControl/Manage FXM functions/PageSettings/EditPageMatcherTabControl
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140605T142012Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dfcd559c-614e-4553-a571-3966d8851c42"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T050308Z

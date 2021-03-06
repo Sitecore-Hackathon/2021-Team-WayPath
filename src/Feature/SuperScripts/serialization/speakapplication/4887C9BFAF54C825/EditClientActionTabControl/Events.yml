@@ -1,0 +1,66 @@
+﻿---
+ID: "6ca1f41f-1e24-47f2-bab4-c478fcfdfaff"
+Parent: "a500ff57-5ba9-4b48-ab38-1c7be011dc70"
+Template: "f62b4cd7-754c-4461-810f-2b6bd2c92a0d"
+Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard/Script Library/Script 1/PageSettings/TabControl/Manage FXM functions/PageSettings/EditClientActionTabControl/Events
+SharedFields:
+- ID: "deab3795-056f-4421-adf0-758844461b72"
+  Hint: Placeholder Name
+  Value: Events
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          ds="{52E0D02D-9746-4E44-8F33-E9115534BE73}"
+          id="{79BD52E6-BA2F-421C-AC7E-622D636898C8}"
+          par="Id=DeployedEventsDataSource"
+          uid="{2DF84AB1-07A1-4A73-8690-B691C0B748D2}" />
+        <r
+          ds="{311D7F89-1786-449F-BEEE-0328DDC5F2EE}"
+          id="{442BD093-FBAD-4E36-BC08-489E16C82D08}"
+          par="Id=EventsExpander&amp;IsCollapsible=0"
+          uid="{E35A8DB4-1BEA-4A60-9B04-4A9D1D4EC84B}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="Id=EventsContentBorder&amp;UsePadding=1"
+          ph="EventsExpander.Body"
+          uid="{EC3B0852-5389-4400-B5AE-C43358BA7EBB}" />
+        <r
+          id="{1F36F9E6-CF70-430B-AA76-239CC08174A3}"
+          par="AddButtonDataSource=%7b7252AAB0-12CC-412D-B363-0E64341B84DB%7d&amp;RemoveButtonDataSource=%7b3D6CDE5C-FE20-4DF6-BC91-A67B484887A4%7d&amp;Id=ClientActionEventsAnalyticsItemPicker&amp;Items=%7bBinding+DeployedEventsDataSource.items%7d&amp;SelectedItemsLabelDataSource=%7b43CCB1A8-9115-4D46-9169-6F18A51DB761%7d&amp;AvailableItemsLabelDataSource=%7b8EFE2D9E-BCB8-4BD7-9AFB-CC50D19AE608%7d&amp;Padding=True"
+          ph="EventsContentBorder.Content"
+          uid="{84A0E24C-8589-46A4-B031-5DDB33A90D99}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140605T142258Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "700e16d8-382a-4224-a4c1-e47b3bf45c46"
+    - ID: "aea872fb-aa91-4d1a-b877-3ca6fbbb4fd4"
+      Hint: Header
+      Value: Events
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T050308Z

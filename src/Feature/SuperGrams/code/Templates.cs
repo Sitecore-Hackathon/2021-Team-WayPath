@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Sitecore.Data;
 
-namespace Feature.SuperGrams
+namespace TeamWayPath.Feature.SuperGrams
 {
   public struct Templates
   {

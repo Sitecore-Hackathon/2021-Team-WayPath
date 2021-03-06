@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution", "_Solution", "{
 		Directory.build.targets = Directory.build.targets
 		nuget.config = nuget.config
 		README.md = README.md
+		sitecore.json = sitecore.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Docker", "_Docker", "{7A261AC4-6FD2-4E54-9DBE-82D78601A150}"
@@ -29,11 +30,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Docker", "_Docker", "{7A26
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SuperScripts", "SuperScripts", "{64F83E06-E851-4D32-AC48-6C240170B0E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feature.SuperScripts", "src\Feature\SuperScripts\code\Feature.SuperScripts.csproj", "{DA31A4EA-1EE8-43B0-9D40-11A4C1B1B7A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamWayPath.Feature.SuperScripts", "src\Feature\SuperScripts\code\TeamWayPath.Feature.SuperScripts.csproj", "{DA31A4EA-1EE8-43B0-9D40-11A4C1B1B7A3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SuperGrams", "SuperGrams", "{03439CDE-E43F-4446-B54D-EDF40C2DD88E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feature.SuperGrams", "src\Feature\SuperGrams\code\Feature.SuperGrams.csproj", "{0758310B-0C03-4A3C-9D39-04EC84528FBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamWayPath.Feature.SuperGrams", "src\Feature\SuperGrams\code\TeamWayPath.Feature.SuperGrams.csproj", "{0758310B-0C03-4A3C-9D39-04EC84528FBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{8F25796B-9753-4432-B572-B05F1F9DF794}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamWayPath.Foundation.Serialization", "src\Foundation\Serialization\code\TeamWayPath.Foundation.Serialization.csproj", "{D1658B48-9978-4AEE-8534-9A47AB83F624}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +54,10 @@ Global
 		{0758310B-0C03-4A3C-9D39-04EC84528FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0758310B-0C03-4A3C-9D39-04EC84528FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0758310B-0C03-4A3C-9D39-04EC84528FBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1658B48-9978-4AEE-8534-9A47AB83F624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1658B48-9978-4AEE-8534-9A47AB83F624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1658B48-9978-4AEE-8534-9A47AB83F624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1658B48-9978-4AEE-8534-9A47AB83F624}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +67,8 @@ Global
 		{DA31A4EA-1EE8-43B0-9D40-11A4C1B1B7A3} = {64F83E06-E851-4D32-AC48-6C240170B0E6}
 		{03439CDE-E43F-4446-B54D-EDF40C2DD88E} = {17DD5718-6E13-4F2C-9738-B410396D4552}
 		{0758310B-0C03-4A3C-9D39-04EC84528FBB} = {03439CDE-E43F-4446-B54D-EDF40C2DD88E}
+		{8F25796B-9753-4432-B572-B05F1F9DF794} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
+		{D1658B48-9978-4AEE-8534-9A47AB83F624} = {8F25796B-9753-4432-B572-B05F1F9DF794}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}

@@ -1,0 +1,108 @@
+﻿---
+ID: "6034c729-c557-45e8-9307-d43b745c6ba3"
+Parent: "cfaae9c1-9ae4-43a1-bfe5-0ad661079659"
+Template: "a0047632-e1e8-4280-9e36-94ff2713855e"
+Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard/Script Library 2/PageSettings/TabControl/Manage FXM functions/PageSettings/EditElementReplacerControl
+SharedFields:
+- ID: "1a5f9feb-245d-4c53-b169-de483fd20269"
+  Hint: SelectorControlId
+  Value: ElementReplacerSelectorTextBox
+- ID: "5029fd67-5f76-46ce-8df6-015d3dba531a"
+  Hint: NameControlId
+  Value: ElementReplacerNameTextBox
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          ds="{F80EFAC7-9D6A-4DE9-91F7-394659C929BF}"
+          id="{442BD093-FBAD-4E36-BC08-489E16C82D08}"
+          par="Id=DetailsAdvancedExpander&amp;IsCollapsible=0"
+          uid="{5BF58DF3-3D5D-4F57-B4D9-43D6888E95DD}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="Id=DialogBorder&amp;UsePadding=1"
+          ph="DetailsAdvancedExpander.Body"
+          uid="{E3BB5B7E-6A4F-47DF-BAA6-0E0C223F6BF9}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="Id=DetailsNameRow"
+          ph="DialogBorder.Content"
+          uid="{A6F0C75C-CAFF-4A59-8904-B17388304944}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=DetailsNameLabelColumn&amp;GridColumns=1"
+          ph="DetailsNameRow.Content"
+          uid="{3A065828-E584-4357-A0F9-531094BF7F6C}" />
+        <r
+          ds="{6CCD154B-1693-4FEC-85F4-C8FD05EEB645}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=DetailsNameLabel"
+          ph="DetailsNameLabelColumn.Content"
+          uid="{66B3E619-6C4B-4AF0-95DA-006D5E1F6083}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=DetailsNameInputColumn&amp;GridColumns=11"
+          ph="DetailsNameRow.Content"
+          uid="{757D4158-ED2D-4A50-9804-B1DA71717CAC}" />
+        <r
+          id="{57F86E9A-1844-45CE-BF8A-62900AE17A92}"
+          par="Id=ElementReplacerNameTextBox"
+          ph="DetailsNameInputColumn.Content"
+          uid="{64C3AEC9-DB90-4709-91B5-1C1A6F1C04FE}" />
+        <r
+          id="{C4393722-39FA-4869-9582-3A8EB8983A0D}"
+          par="Id=DetailsSelectorRow"
+          ph="DialogBorder.Content"
+          uid="{4605FFC6-B14D-4399-8405-8FD52513FC69}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=DetailsSelectorLabelColumn&amp;GridColumns=1"
+          ph="DetailsSelectorRow.Content"
+          uid="{236D2C8C-04BD-402A-9F8F-E0F555CAFD8D}" />
+        <r
+          ds="{A60B77CE-BAE1-49B6-85FB-2336F6C3D55A}"
+          id="{98316BB6-F3F5-4E6F-81F0-79F173D151D8}"
+          par="Id=DetailsSelectorLabel"
+          ph="DetailsSelectorLabelColumn.Content"
+          uid="{72BA466A-C702-4A9A-857C-8C0ECBBDBE2C}" />
+        <r
+          id="{5CB208F6-1860-426B-8221-FAA85B329848}"
+          par="Id=DetailsSelectorInputColumn&amp;GridColumns=11"
+          ph="DetailsSelectorRow.Content"
+          uid="{E002314C-5740-47EA-85C1-2E4C2C0BADBF}" />
+        <r
+          id="{57F86E9A-1844-45CE-BF8A-62900AE17A92}"
+          par="Id=ElementReplacerSelectorTextBox"
+          ph="DetailsSelectorInputColumn.Content"
+          uid="{C6C7C9DF-0908-485C-A22A-344B7FB81F42}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140918T153631Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d1de5107-42f1-4bd6-aa43-464ff4093f78"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T050308Z

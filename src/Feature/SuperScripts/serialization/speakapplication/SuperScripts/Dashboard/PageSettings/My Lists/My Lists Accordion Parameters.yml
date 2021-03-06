@@ -1,0 +1,37 @@
+﻿---
+ID: "f0ddf91b-6692-4ab7-a787-865aea46e7fb"
+Parent: "6052b7ca-7586-44ff-ba15-383bfa85bdc9"
+Template: "1c98e698-030c-43ff-8b6c-08d6d7e1b8dc"
+Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard/PageSettings/My Lists/My Lists Accordion Parameters
+SharedFields:
+- ID: "0ea58259-0f86-47bb-b1b7-2eb33d905d15"
+  Hint: IsOpen
+  Value: 1
+- ID: "6d0c0ab0-bc40-4bd0-8acb-16612a180f14"
+  Hint: IsVisible
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140409T232021
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bc647f46-49af-481a-92b6-f52ba23df9af"
+    - ID: "8d593ebb-4a48-4b85-8e79-bf745023bd61"
+      Hint: Header
+      Value: My Lists
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T041343Z

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Sitecore.Data;
 
-namespace Feature.SuperScripts
+namespace TeamWayPath.Feature.SuperScripts
 {
   public struct Templates
   {

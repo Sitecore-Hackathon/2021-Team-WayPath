@@ -1,0 +1,23 @@
+﻿---
+ID: "6052b7ca-7586-44ff-ba15-383bfa85bdc9"
+Parent: "5bc45da8-3337-49ef-be7c-cda1b14b0236"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard/PageSettings/My Lists
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140428T114531
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d253eb53-499a-44b0-8af3-20e25c1a31a6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T041343Z

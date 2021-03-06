@@ -1,0 +1,153 @@
+﻿---
+ID: "c3a89d1a-9be0-4755-832f-5c58d1f9ee46"
+Parent: "c3930fd0-f8bf-4c47-8094-d0c6863794f3"
+Template: "b11afccd-c286-4384-b694-4465d6c605de"
+Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: SoftwareV2/16x16/console_run.png
+- ID: "3a67ad0f-9530-4b1b-9b70-9230c36ae8d6"
+  Hint: UseFullWidth
+  Value: 1
+- ID: "5e642935-a6fc-48e9-b039-fe1136ced488"
+  Hint: Theme
+  Value: Oxford
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{4F72A793-BDBC-4262-9523-6AADD8FEA487}">
+        <r
+          id="{DAFAFFB8-74AF-4141-A96A-70B16834CEC6}"
+          par="PageCodeScriptFileName=%2f-%2fspeak%2fv1%2flistmanager%2fDashboard.js"
+          ph="Page.Code"
+          uid="{237256AA-9D30-463E-9ED1-90CFF092FCF6}" />
+        <r
+          ds="{5C173DB2-A00B-4CA9-9985-7005130763F3}"
+          id="{7E1570EB-E8DC-484C-9EC0-050F5E3EC3CF}"
+          ph="ApplicationContent.Navigation"
+          uid="{BA437C6A-F2EF-48D6-ABD3-17813865534C}" />
+        <r
+          id="{225B55AC-0270-44F9-842B-96D89F9C20A9}"
+          ph="Page.Body"
+          uid="{822F45CF-5E38-4827-B56F-55773F468ADE}" />
+        <r
+          ds="{01D530FA-8A2D-4D35-981D-43CDC1A93D2D}"
+          id="{8A49156E-EA68-42D3-B343-F701042832E3}"
+          par="Id=RecentlyCreatedListsListsDataSource"
+          ph="Page.Body"
+          uid="{16CA4456-FAF0-482F-9050-D07150B14540}" />
+        <r
+          ds="{C87150CA-0DA2-4B32-A715-D6D0B72C0359}"
+          id="{8A49156E-EA68-42D3-B343-F701042832E3}"
+          par="Id=MyListsListsDataSource"
+          ph="Page.Body"
+          uid="{974B0593-241C-4583-8BB9-A11E7A2AFB83}" />
+        <r
+          id="{5AE97C0C-EE88-4564-A363-4FA11C01C90A}"
+          ph="GlobalHeader"
+          uid="{532C7DCD-29E7-4C34-9910-FC283D61A026}" />
+        <r
+          id="{7A69C522-7E99-4630-A25A-5D571505862A}"
+          par="Id=GlobalLogo"
+          ph="GlobalHeader.StartButton"
+          uid="{A340B9F2-9FD0-4767-9B0B-62D7C8B0E5C7}" />
+        <r
+          id="{EA28ED83-0F59-4BB9-AA95-6FAC9C3385D6}"
+          par="Id=ListNavigationPanelToggleButton"
+          ph="GlobalHeader.NavigationToggler"
+          uid="{2861F5EB-6221-4379-9BB3-F8BCC1F9CDE3}" />
+        <r
+          id="{2EE499CD-439A-4F10-B81F-36A54CAC01DB}"
+          par="Id=AccountInformation"
+          ph="GlobalHeader.LoginInfo"
+          uid="{60848696-6FAA-4EA0-83E5-359E41A2887F}" />
+        <r
+          id="{EC86834B-890C-405C-BB36-CA25044909E1}"
+          ph="GlobalFooter"
+          uid="{C01DD5BD-DFC2-425B-A301-43AE8363B443}" />
+        <r
+          id="{93CEEFCD-2DE1-40AF-AE9A-EBBFBCCC522F}"
+          ph="ApplicationHeader"
+          uid="{1E240370-226C-40E4-9C54-7FE8630DF74A}" />
+        <r
+          ds="{9A2C456A-602E-4398-821E-9B554E562EB5}"
+          id="{7717EB6C-9F90-4C58-826D-5E87722A0318}"
+          par="Id=HeaderTitle"
+          ph="ApplicationHeader.Title"
+          uid="{1DC97590-77EC-4F75-A687-D86F7D22CAAA}" />
+        <r
+          id="{910155C7-3881-4A56-90FB-D126490EDE55}"
+          par="Id=ListMessageBar"
+          ph="ApplicationHeader"
+          uid="{0896C387-3892-483A-9A56-9D239218EC50}" />
+        <r
+          id="{EB6214BE-5687-4706-ABA6-B25C0958C85B}"
+          ph="ApplicationContent"
+          uid="{5C96B069-71B7-4B1D-BE44-B673DE81D9DE}" />
+        <r
+          ds="{F0781917-3DE8-4620-8B5A-22B94E13891D}"
+          id="{A82840D0-633E-4D1A-B7FE-8C0062AA22F1}"
+          par="Id=StringDictionary"
+          ph="Main.Content"
+          uid="{4872B46A-CD3E-42C5-8F0C-562C8681EB75}" />
+        <r
+          id="{4700454A-2A9C-4380-8D09-03572BF883CA}"
+          ph="Main.Content"
+          uid="{14B1F5E0-9209-4861-81E8-CCBAF6015D29}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="UsePadding=0&amp;Id=Main"
+          ph="ApplicationContent.Main"
+          uid="{8EC02FDB-51E9-4983-9AD3-FAD2210E5BAC}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="PaddingType=Top&amp;UsePadding=1&amp;Id=AccordionsSeparator"
+          ph="Main.Content"
+          uid="{1E0BDD6B-F210-4FE9-AE38-2FE5A28B1C53}" />
+        <r
+          id="{DC707F46-7F5E-4BA1-9BF9-820B4A23EC3F}"
+          par="Name=Scrollbar&amp;PageScriptFileName=%2fsitecore%2fshell%2fclient%2fSpeak%2fAssets%2flib%2fui%2f1.1%2fbehaviors%2fScrollBar.js&amp;Id=Scrollbar"
+          ph="Main.Content"
+          uid="{6394D0EE-558E-4BA7-8BB0-0FF87BC6AFD0}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Dashboard
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140304T075831Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "7205a57f-93b4-413a-aa9a-6b16bbc59565"
+      Hint: BrowserTitle
+      Value: Main
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8b5b95ce-d5b0-46cd-9fd3-735581b9474f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T110023Z

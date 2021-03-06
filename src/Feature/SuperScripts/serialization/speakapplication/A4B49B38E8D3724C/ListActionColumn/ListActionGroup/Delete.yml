@@ -1,0 +1,40 @@
+﻿---
+ID: "c8c9db9b-1ed2-4198-b778-60a9f64eb44a"
+Parent: "298b99ee-9239-46e4-8d6b-dfe5efc0d5ca"
+Template: "5ee9a69b-bc29-452e-b2d0-ad421a04e7bf"
+Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard/PageSettings/Recently Created Lists/Recently Created Lists ActionControl Parameters/ListActionColumn/ListActionGroup/Delete
+SharedFields:
+- ID: "377bca4b-8687-4a89-b0d7-cc56765ad81b"
+  Hint: Click
+  Value: |
+    trigger:delete:list({"control":"RecentlyCreatedListsListControl","actionsDataSource":"MyListsListsDataSource"})
+- ID: "549da08f-8b0e-4a2f-9f1f-b35c474fe2a0"
+  Hint: ImageUrl
+  Value: ~/icon/Office/16x16/delete.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140428T125216
+    - ID: "443c0046-ceb9-432a-9db0-cbc11787c786"
+      Hint: Title
+      Value: Delete
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c557eb37-c7f8-4a8b-9c81-25b962e61123"
+    - ID: "9384139b-2f73-4f0f-8650-0c7a1d4c6ddc"
+      Hint: Tooltip
+      Value: Delete the list.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T041343Z

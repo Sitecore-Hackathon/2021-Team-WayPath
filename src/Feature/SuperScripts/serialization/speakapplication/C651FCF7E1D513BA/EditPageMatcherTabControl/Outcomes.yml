@@ -1,0 +1,64 @@
+﻿---
+ID: "1e64f2cb-0b86-4ce1-bba3-c4a207417623"
+Parent: "2fbcc456-3f7b-44b1-be81-505dd9a57fa7"
+Template: "f62b4cd7-754c-4461-810f-2b6bd2c92a0d"
+Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard/Script Library 2/Script 1/PageSettings/TabControl/Manage FXM functions/PageSettings/EditPageMatcherTabControl/Outcomes
+SharedFields:
+- ID: "deab3795-056f-4421-adf0-758844461b72"
+  Hint: Placeholder Name
+  Value: Outcomes
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          ds="{8F652F98-D305-4A4D-AE4A-CF2F2E550F85}"
+          id="{79BD52E6-BA2F-421C-AC7E-622D636898C8}"
+          par="Id=DeployedOutcomesSearchDataSource"
+          uid="{8875EFF3-AF5D-415E-9CEF-CABE542206DB}" />
+        <r
+          ds="{CFF6A5F8-04DF-4137-B2BC-91D55FC4B18E}"
+          id="{442BD093-FBAD-4E36-BC08-489E16C82D08}"
+          par="Id=OutcomesExpander&amp;IsCollapsible=0"
+          uid="{507D3123-8E9C-4D16-9E1D-B4443B79DFBA}" />
+        <r
+          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
+          par="Id=OutcomesContentBorder&amp;UsePadding=1"
+          ph="OutcomesExpander.Body"
+          uid="{96D4DD86-E737-42D2-85CC-CD728E348955}" />
+        <r
+          ds="{27842079-EF86-4F9E-B97D-FBA3F2C21099}"
+          id="{7717EB6C-9F90-4C58-826D-5E87722A0318}"
+          par="Id=OutcomesIntroText"
+          ph="OutcomesContentBorder.Content"
+          uid="{2CA33679-7D00-4281-9D4A-445ACDA1C484}" />
+        <r
+          id="{1F36F9E6-CF70-430B-AA76-239CC08174A3}"
+          par="AddButtonDataSource=%7bB4A2902D-4946-4A3D-A985-97BE77A5C47D%7d&amp;RemoveButtonDataSource=%7bF918FF60-3417-4E54-BB10-2F51DE736AC6%7d&amp;Id=PageMatcherOutcomesAnalyticsItemPicker&amp;Items=%7bBinding+DeployedOutcomesSearchDataSource.items%7d&amp;SelectedItemsLabelDataSource=%7b9239D84D-A8AA-49FF-8D7D-C3B260AA0CBD%7d&amp;AvailableItemsLabelDataSource=%7b01F1CA5C-66B9-476D-8157-96D75B340F89%7d&amp;Padding=True"
+          ph="OutcomesContentBorder.Content"
+          uid="{7E87084D-49C5-4710-AED1-033A5F03818A}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20150417T121543Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8950d467-8ab2-4b5f-9fa1-5bbe39f4208a"
+    - ID: "aea872fb-aa91-4d1a-b877-3ca6fbbb4fd4"
+      Hint: Header
+      Value: Outcomes
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T050308Z

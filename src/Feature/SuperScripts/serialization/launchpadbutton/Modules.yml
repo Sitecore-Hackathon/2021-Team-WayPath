@@ -1,0 +1,33 @@
+﻿---
+ID: "6f765c13-6656-42ed-a84a-df0a27866c0a"
+Parent: "c625db2f-6db2-4645-b7f7-733abfc2cac6"
+Template: "5ee505ee-8c0c-4cbd-8815-c1b7b1f06516"
+Path: /sitecore/client/Applications/Launchpad/PageSettings/Buttons/Modules
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 325
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210306T031241Z
+    - ID: "37b960aa-e219-44e8-8f5d-35781a98b8fa"
+      Hint: RowsNumber
+      Value: 3
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3eb2f20a-8209-465f-b0d3-f85228278507"
+    - ID: "9d42566f-ef44-4c3a-b6b5-94d9397bc24d"
+      Hint: Title
+      Value: Modules
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210306T061125Z

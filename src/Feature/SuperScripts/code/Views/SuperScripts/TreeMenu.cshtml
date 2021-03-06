@@ -1,0 +1,52 @@
+﻿@using System.Collections.Generic;
+@using System.Web.Mvc;
+
+@model List<TeamWayPath.Feature.SuperScripts.Models.TreeMenuViewModel>
+
+
+    @*@foreach (var list in Model)
+    {
+        <div>@list.Title</div>
+        <ul>
+            @foreach (var item in list.MenuItems)
+            {
+                <li><a href="@item.Link">@item.Title</a></li>
+            }
+        </ul>
+    }*@
+
+
+    <div data-sc-id="ListsMenua" data-sc-isenabled="True" class="sc-menu sc_Menu_20 data-sc-registered" data-sc-require="/-/speak/v1/business/Menu.js">
+
+        <div class="menuroot" sc-guid="menuroot">
+            @foreach (var list in Model)
+            {
+                <div>
+
+                    <div class="header menuItem open" isopen="true">
+                        <a href="#">
+                            <img class="menuicon" src="/temp/iconcache/applications/24x24/window_ok.png">
+                            <span class="toplevel">@list.Title</span>
+                        </a>
+                        <img class="menuchevron" src="/sitecore/shell/client/Speak/Assets/img/Speak/Common/16x16/light_gray/navigate_down.png">
+                    </div>
+                    @foreach (var item in list.MenuItems)
+                    {
+                        <div class="toplevelcontainer itemsContainer" sc-guid="{69A889A3-BA6B-4BB2-B90D-3C6D0EC81ACF}" style="display: block">
+                            <div>
+                                <div class="itemRow menuItem depth2 ">
+                                    <div class="leftcolumn noChildren">&nbsp;</div>
+                                    <div class="rightcolumn">
+                                        <a href="@item.Link">
+                                            <span class="rcpad noChildren">@item.Title</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sublevelcontainer itemsContainer depth2" sc-guid="{3C19C00B-C5D4-4E09-B9D1-31A6DED27688}" style="display: none"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
