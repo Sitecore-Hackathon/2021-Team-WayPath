@@ -3,6 +3,7 @@ ID: "5bc45da8-3337-49ef-be7c-cda1b14b0236"
 Parent: "c3a89d1a-9be0-4755-832f-5c58d1f9ee46"
 Template: "e35eaa2d-edea-431c-a9e6-488272b53782"
 Path: /sitecore/client/Your Apps/Feature/SuperScripts/Dashboard/PageSettings
+BranchID: "ef643281-0f7f-41f0-9af3-93e2da21a9a6"
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder

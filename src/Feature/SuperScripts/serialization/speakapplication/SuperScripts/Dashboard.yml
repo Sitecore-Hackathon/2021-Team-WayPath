@@ -38,18 +38,6 @@ SharedFields:
           ph="Page.Body"
           uid="{822F45CF-5E38-4827-B56F-55773F468ADE}" />
         <r
-          ds="{01D530FA-8A2D-4D35-981D-43CDC1A93D2D}"
-          id="{8A49156E-EA68-42D3-B343-F701042832E3}"
-          par="Id=RecentlyCreatedListsListsDataSource"
-          ph="Page.Body"
-          uid="{16CA4456-FAF0-482F-9050-D07150B14540}" />
-        <r
-          ds="{C87150CA-0DA2-4B32-A715-D6D0B72C0359}"
-          id="{8A49156E-EA68-42D3-B343-F701042832E3}"
-          par="Id=MyListsListsDataSource"
-          ph="Page.Body"
-          uid="{974B0593-241C-4583-8BB9-A11E7A2AFB83}" />
-        <r
           id="{5AE97C0C-EE88-4564-A363-4FA11C01C90A}"
           ph="GlobalHeader"
           uid="{532C7DCD-29E7-4C34-9910-FC283D61A026}" />
@@ -83,20 +71,9 @@ SharedFields:
           ph="ApplicationHeader.Title"
           uid="{1DC97590-77EC-4F75-A687-D86F7D22CAAA}" />
         <r
-          id="{910155C7-3881-4A56-90FB-D126490EDE55}"
-          par="Id=ListMessageBar"
-          ph="ApplicationHeader"
-          uid="{0896C387-3892-483A-9A56-9D239218EC50}" />
-        <r
           id="{EB6214BE-5687-4706-ABA6-B25C0958C85B}"
           ph="ApplicationContent"
           uid="{5C96B069-71B7-4B1D-BE44-B673DE81D9DE}" />
-        <r
-          ds="{F0781917-3DE8-4620-8B5A-22B94E13891D}"
-          id="{A82840D0-633E-4D1A-B7FE-8C0062AA22F1}"
-          par="Id=StringDictionary"
-          ph="Main.Content"
-          uid="{4872B46A-CD3E-42C5-8F0C-562C8681EB75}" />
         <r
           id="{4700454A-2A9C-4380-8D09-03572BF883CA}"
           ph="Main.Content"
@@ -106,16 +83,6 @@ SharedFields:
           par="UsePadding=0&amp;Id=Main"
           ph="ApplicationContent.Main"
           uid="{8EC02FDB-51E9-4983-9AD3-FAD2210E5BAC}" />
-        <r
-          id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}"
-          par="PaddingType=Top&amp;UsePadding=1&amp;Id=AccordionsSeparator"
-          ph="Main.Content"
-          uid="{1E0BDD6B-F210-4FE9-AE38-2FE5A28B1C53}" />
-        <r
-          id="{DC707F46-7F5E-4BA1-9BF9-820B4A23EC3F}"
-          par="Name=Scrollbar&amp;PageScriptFileName=%2fsitecore%2fshell%2fclient%2fSpeak%2fAssets%2flib%2fui%2f1.1%2fbehaviors%2fScrollBar.js&amp;Id=Scrollbar"
-          ph="Main.Content"
-          uid="{6394D0EE-558E-4BA7-8BB0-0FF87BC6AFD0}" />
       </d>
     </r>
 Languages:
@@ -143,11 +110,11 @@ Languages:
       Value: Main
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8b5b95ce-d5b0-46cd-9fd3-735581b9474f"
+      Value: "ef26477c-ad62-423e-a913-659438cfdc5c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210306T110023Z
+      Value: 20210306T173453Z
