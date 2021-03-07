@@ -26,7 +26,7 @@ Find and Replace in ALL Fields - Find and replace on string with another in all 
 Sitecore Powershell Extensions
 
 ## Installation instructions
-Simply install the SuperScripts.zip package!
+Simply install the SitecorePackages/SuperScripts.zip package!
 
 ### Configuration
 Superscripts come with several out of box scripts, but more can be added.
