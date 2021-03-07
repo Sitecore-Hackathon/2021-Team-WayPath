@@ -26,7 +26,7 @@ Clean HTML - Allows you to strip out HTML tags from all or specific fields.
 ## Video link
 ⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
 
-⟹ [Replace this Video link](#video-link)
+⟹ [https://youtu.be/qF0MP3gSvhA](#video-link)
 
 
 
@@ -34,7 +34,7 @@ Clean HTML - Allows you to strip out HTML tags from all or specific fields.
 Sitecore Powershell Extensions
 
 ## Installation instructions
-Simply install the SuperScripts.zip package!
+Simply install the SitecorePackages/SuperScripts.zip package!
 
 ### Configuration
 Superscripts come with several out of box scripts, but more can be added.
