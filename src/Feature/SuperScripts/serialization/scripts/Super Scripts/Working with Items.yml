@@ -4,6 +4,9 @@ Parent: "7d40d970-475b-4227-b7f8-9041dda63b87"
 Template: "6d82fcd8-c379-443c-97a9-c6423c71e7d5"
 Path: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts/Working With Items
 SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/jar.png
 - ID: "6d22bcce-2799-4324-b0d9-c44df5effaf3"
   Hint: Description
   Value: Provide useful scripts
@@ -28,11 +31,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2c23755a-4fb2-458d-b329-1382348993d5"
+      Value: "5b8e54fa-6b76-4a89-be9e-0ee3f1502539"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210306T105732Z
+      Value: 20210307T002359Z

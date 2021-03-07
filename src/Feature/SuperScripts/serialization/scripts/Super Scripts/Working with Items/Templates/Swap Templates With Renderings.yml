@@ -3,80 +3,6 @@ ID: "16cf4dc6-9b23-4ba3-9417-317459a912ba"
 Parent: "c7a6735d-70f2-4a86-ad0e-0ab9ef1255c9"
 Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
 Path: /sitecore/system/Modules/PowerShell/Script Library/Super Scripts/Working With Items/Templates/Swap Templates With Renderings
-SharedFields:
-- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
-  Hint: Script
-  Value: |
-    <#
-        .LINK
-            https://vandsh.github.io/sitecore/2018/07/13/spe-search-replace-v2.html
-            
-            https://gist.github.com/michaellwest/2c16946aed8653ec2694c24decf4ed1f
-    #>
-    $index="sitecore_master_index";
-    $fieldRequiredValidator = { 
-        if([string]::IsNullOrEmpty($variable.Value)){
-            $variable.Error = "Please provide a value."
-        }
-    }
-    $defaultLayout = Get-LayoutDevice "Default";
-    $dialogProps = @{
-        Parameters = @(
-            @{ Name = "rootItem"; value=""; Title="Root Item"; Source="Datasource=/sitecore/content/"; editor="droptree"},
-            @{ Name = "currentTemplate"; Value=""; Title="Item Type to Replace"; Tooltip="The templates to replace"; editor="droptree"; Source="/sitecore/templates"; Validator=$fieldRequiredValidator}
-            @{ Name = "targetTemplate"; Value=""; Title="Item Type to Replace With"; Tooltip="The templates to search through"; editor="droptree"; Source="/sitecore/templates"; Validator=$fieldRequiredValidator}
-            @{ Name = "backupPackage"; Value =$true; Title="Create a Backup Package"; editor="checkbox"}
-        )
-        Description = "Swap the template of multiple items"
-        Title = "Swap Templates"
-        Width = 700
-        Height = 575
-        OkButtonName = "Ok"
-        CancelButtonName = "Cancel"
-        ShowHint = $true
-        Icon = [regex]::Replace($PSScript.Appearance.Icon, "Office", "OfficeWhite", [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-    }
-    $result = Read-Variable @dialogProps
-        
-    if($result -ne "ok") {
-        Exit
-    }
-    $itemsWithCurrentTemplate = Get-ChildItem -Item $rootItem -recurse | Where-Object { $_.TemplateName -eq $currentTemplate.Name };
-    $itemCount = $itemsWithCurrentTemplate.Count
-    if($itemCount -gt 0)
-    {
-    if($backupPackage)
-        {
-            $package = New-Package "Swap Templates";
-             
-            $package.Metadata.Author = (Get-User -Current).Name;
-            $package.Metadata.Version = [sitecore.dateutil]::ToIsoDate([datetime]::Now);
-             
-             
-            $itemsWithCurrentTemplate | ForEach-Object {
-                $source = $_ | New-ExplicitItemSource -Name $_.Name -InstallMode Merge -MergeMode Merge
-                $package.Sources.Add($source);
-            }
-             
-            # Save package
-            Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Version).zip" -Zip  
-             
-            # Offer the user to download the package
-            Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Version).zip"
-        }
-    }
-    $itemsWithCurrentTemplate | ForEach-Object {
-        Set-ItemTemplate -Item $_ -TemplateItem $targetTemplate };
-    $reportProps = @{
-        Property = @(
-            "ID","Name","ItemPath","TemplateName","Version"
-        )
-        Title = "Find and Replace Report"
-        InfoTitle = "Report Details"
-        InfoDescription = "The following report shows items found with the specified criteria."
-    }
-    $itemsWithCurrentTemplate | Show-ListView @reportProps
-    Close-Window
 Languages:
 - Language: en
   Versions:
@@ -95,11 +21,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "87e6be9d-4db8-4207-b560-91b4270b677d"
+      Value: "c60494a9-9529-4244-8e7e-c385c8dd2a68"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210307T000033Z
+      Value: 20210306T224317Z

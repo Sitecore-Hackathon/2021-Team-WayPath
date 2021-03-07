@@ -8,6 +8,7 @@ namespace TeamWayPath.Feature.SuperScripts.Models
     public class TreeMenuViewModel
     {
         public string Title { get; set; }
+        public string Icon { get; set; }
         public IEnumerable<MenuItem> MenuItems { get; set; }
     }
 }

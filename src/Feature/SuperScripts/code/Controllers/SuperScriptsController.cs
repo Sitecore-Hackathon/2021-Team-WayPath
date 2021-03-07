@@ -49,6 +49,7 @@ namespace TeamWayPath.Feature.SuperScripts.Controllers
             {
                 var treeMenuItem = new TreeMenuViewModel();
                 treeMenuItem.Title = item.DisplayName;
+                treeMenuItem.Icon = GetIcon(item.Appearance.Icon);
 
                 var menuItems = new List<MenuItem>();
                 foreach (Item child in item.Children)
@@ -102,13 +103,29 @@ namespace TeamWayPath.Feature.SuperScripts.Controllers
                 {
                     Title = child.DisplayName,
                     Guid = child.ID.ToString(),
-                    Url = urlString.ToString()
+                    Url = urlString.ToString(),
+                    Icon = GetIcon(child.Appearance.Icon)
                 });
             }
 
             model.ScriptItems = scriptItems;
 
             return View("DisplayScript", model);
+        }
+
+        private string GetIcon(string icon)
+        {
+            if (icon.StartsWith("~"))
+            {
+                icon = Sitecore.StringUtil.EnsurePrefix('/', icon);
+            }
+
+            else if (!(icon.StartsWith("/") && icon.Contains(":")))
+            {
+                icon = Sitecore.Resources.Images.GetThemedImageSource(icon);
+            }
+
+            return icon;
         }
     }
 }
