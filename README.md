@@ -6,4 +6,4 @@
 - [Starter kit instructions](STARTERKIT_INSTRUCTIONS.md)
   
 
-### ⟹ [Insert your documentation here](ENTRYFORM.md) <<
+### ⟹ [Please click here for the module documentation](ENTRYFORM.md) <<

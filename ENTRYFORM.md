@@ -16,6 +16,12 @@ Find and Replace in Field - Find and replace one string with another in a specif
 
 Find and Replace in ALL Fields - Find and replace on string with another in all fields.
 
+Update Field Value - Allows you replace the value of a field by specifying a root, templates, field name and the new value.
+
+Update Rendering Parameter - Allows you to update the rendering parameter for a specfied rendering with a new value.
+
+Clean HTML - Allows you to strip out HTML tags from all or specific fields.
+
 
 ## Video link
 ⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
