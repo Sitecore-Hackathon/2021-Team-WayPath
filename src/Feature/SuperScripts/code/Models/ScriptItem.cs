@@ -10,5 +10,6 @@ namespace TeamWayPath.Feature.SuperScripts.Models
         public string Title { get; set; }
         public string Guid { get; set; }
         public string Url { get; set; }
+        public string Icon { get; set; }
     }
 }
