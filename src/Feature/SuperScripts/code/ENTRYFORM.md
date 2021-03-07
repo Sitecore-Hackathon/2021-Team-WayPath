@@ -18,9 +18,7 @@ Find and Replace in ALL Fields - Find and replace on string with another in all 
 
 
 ## Video link
-⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
-
-⟹ [Replace this Video link](#video-link)
+[https://youtu.be/ZjFDIwpYO3k](#video-link)
 
 
 
